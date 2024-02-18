@@ -1,0 +1,120 @@
+/* 
+    Palette:
+        #FF2E63,
+        #EAEAEA,
+        #252A34,
+        #08D9D6,
+
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #242422;
+}
+
+header {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+
+}
+
+h1 {
+    font-size: 2.2rem;
+    font-family: 'Roboto';
+    color: #EAEAEA;
+    position: relative; /* Para posicionar el subrayado */
+    display: block;
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    bottom: -3px; /* Ajusta la posición del subrayado */
+    left: 50%; /* Centra el subrayado */
+    transform: translateX(-50%); /* Centra horizontalmente el subrayado */
+    width: 100%; /* Ancho del subrayado */
+    height: 2px; /* Grosor del subrayado */
+    background: rgb(255,46,99);
+    background: linear-gradient(90deg, rgba(255,46,99,1) 0%, rgba(8,217,214,1) 100%);
+}
+
+main {
+    padding: 40px;
+}
+
+#list {
+    display: flex;
+    align-items: center;
+}
+
+.node {
+    width: 75px;
+    height: 75px;
+    background-color: #FF2E63;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* animation: add-node 1.5s ease; */
+
+}
+
+.node p{
+    font-family: 'Roboto';
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.arrow {
+    margin: 0 10px 0 10px;
+    /* animation: 
+        fade-in 1.5s 1.5s linear
+        ,rotate-arrow 1.5s 1.5s ease; */
+}
+
+.hide {
+    display: none;
+}
+
+.arrow img {
+    width: 48px; /* Ajusta el tamaño de la flecha */
+    height: 48px;
+}
+
+@keyframes add-node {
+    0% {
+        scale: 0;
+    }
+
+    50% {
+        scale: 1.2;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+@keyframes rotate-arrow {
+    0% {
+        rotate: 0deg;
+    }
+
+    100% {
+        rotate: 360deg;
+    }
+}
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
