@@ -8,10 +8,6 @@ const addBtn = document.getElementById('add-node');
 let long = 0;
 let head = nodes[0];
 
-// function animateNode(newNode) {
-//     newNode.style.animation = 'add-node 1.5s ease';
-// }
-
 const onceAnimationEnd = (el, animation) => {
     return new Promise(resolve => {
         const onAnimationEndCallback = () => {
@@ -34,12 +30,15 @@ function createArrow() {
 
 async function addNode() {
     let newNode = document.createElement('div');
+    let number = document.createElement('p');
     let newArrow = createArrow();
+
+    newNode.append(number);
 
     newNode.classList = 'node';
     newArrow.classList = 'arrow';
 
-    newNode.innerText = addInput.value;
+    newNode.firstChild.innerText = addInput.value;
 
     addBtn.disabled = true;
     list.appendChild(newNode);
