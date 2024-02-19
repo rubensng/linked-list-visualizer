@@ -16,19 +16,27 @@
         <section id="list">
             <div class="node"><p class="number">1</p></div>
             <div class="arrow"><img src="arrow.png" draggable="false"></div>
-            <!-- <div class="node"><p class="number">7</p></div>
-            <div class="arrow"><img src="arrow.png" draggable="false"></div>
-            <div class="node"><p class="number">7</p></div>
-            <div class="arrow"><img src="arrow.png" draggable="false"></div>
-            <div class="node"><p class="number">7</p></div>
-            <div class="arrow"><img src="arrow.png" draggable="false"></div> -->
         </section>
-    
+        
         <section id="options">
-            <label for="add-value">Add Node</label>
-            <input type="text" id="add-value" name="add-value"/>
-            <button id="add-node">Submit</button>
+            <div class="wrapper">
+                <div class="column">
+                    <button id="insert-node">Insert Node</button>
+                    <input type="text" id="insert-index" name="insert-index" placeholder="Index"/>
+                    <input type="text" id="insert-value" name="insert-value" placeholder="Value"/>
+                </div>
+                <div class="column">
+                    <button id="modify-node">Modify Node Value</button>
+                    <input type="text" id="modify-index" name="modify-index" placeholder="Index"/>
+                    <input type="text" id="modify-value" name="modify-value" placeholder="Value"/>
+                </div>
+                <div class="column">
+                    <button id="remove-node">Remove Node</button>
+                    <input type="text" id="remove-index" name="remove-index" placeholder="Index"/>
+                </div>
+            </div>
         </section>
+
     </main>
 
 

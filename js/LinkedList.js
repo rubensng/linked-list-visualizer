@@ -2,8 +2,8 @@ let nodes = document.getElementsByClassName('node');
 let arrows = document.getElementsByClassName('arrow');
 
 const list = document.getElementById('list');
-const addInput = document.getElementById('add-value');
-const addBtn = document.getElementById('add-node');
+const addInput = document.getElementById('insert-value');
+const addBtn = document.getElementById('insert-node');
 
 let long = 0;
 let head = nodes[0];
